@@ -15,6 +15,7 @@ def deployToCloudHub(String JarName){
                    // jarName=sh (script : 'ls /devops/out/CDScript/working/${BUILD_NUMBER}_${JOB_NAME}/',returnStdout:true)
                     println "jar name ${jarName}"
                     sh """anypoint-cli --username ${Username} --password ${Password} runtime-mgr cloudhub-application deploy --runtime properties.runtime --workers properties.worker --workerSize properties.workerSize --region properties.region --property "username:${Username}" "muleappfirstproject" ${PATH} """
+                }
 	}
 	else{
 		println("general deploymnent")
