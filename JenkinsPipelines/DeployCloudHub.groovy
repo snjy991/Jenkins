@@ -1,6 +1,6 @@
 def deployToCloudHub(String JarName){
-
-	String PATH= "/devops/out/CDScript/working/"${BUILD_NUMBER}_${JOB_NAME}"/"${JarName}";
+	
+	String PATH= "/devops/out/CDScript/working/".concat(JarName)
 	println (PATH);
 	
 	Properties properties = new Properties()
