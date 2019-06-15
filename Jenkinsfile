@@ -8,7 +8,7 @@ pipline{
 		stage('second'){
 			steps{
 				script{
-				def common =load "Common.groovy"
+				def common =load "JenkinsPipelines/Common.groovy"
 					common.testMethod()
 				}
 			}
