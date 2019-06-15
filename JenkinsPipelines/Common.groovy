@@ -1,4 +1,5 @@
 def testMethod(){
-	println(GIT_BRANCH);		
+	def brachname=GIT_BRANCH;
+	println(branchname.tokenize("/")[0]);		
 }
 return this
