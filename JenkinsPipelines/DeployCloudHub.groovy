@@ -1,7 +1,7 @@
 
 def deployToCloudHub(String JarName){
 	
-	String PATH= "/Users/snjy/Desktop/JenkinsPipelines"+JarName
+	String PATH= "/devops/out/CDScript/working/13_CDPipeline/"+JarName
 	println (PATH);
 	
 	Properties properties = new Properties()
