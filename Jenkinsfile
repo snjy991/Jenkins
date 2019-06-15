@@ -1,5 +1,4 @@
-pipline{
-	node any
+
 	stages{
 		stage('first'){
 			steps{
@@ -14,5 +13,4 @@ pipline{
 			}
 		}	
 		}
-	}
-}
+
