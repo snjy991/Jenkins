@@ -4,6 +4,7 @@
 			steps{
 				echo "first stage"
 			}
+		}	
 		stage('second'){
 			steps{
 				script{
