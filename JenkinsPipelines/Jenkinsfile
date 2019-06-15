@@ -1,0 +1,18 @@
+pipline{
+	node any
+	stages{
+		stage('first'){
+			steps{
+				echo "first stage"
+			}
+		stage('second'){
+			steps{
+				script{
+				def common =load "Common.groovy"
+					common.testMethod()
+				}
+			}
+		}	
+		}
+	}
+}
