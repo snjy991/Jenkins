@@ -1,5 +1,8 @@
 pipeline{
 	agent any
+	parameters {
+		choice(name:'DeploymentType',choices: 'FirstRun\nGeneralRun')
+	}
 	stages{
 		stage('first'){
 			steps{
