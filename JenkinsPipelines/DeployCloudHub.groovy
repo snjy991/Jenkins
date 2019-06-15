@@ -4,7 +4,7 @@ def deployToCloudHub(String JarName){
 	println (PATH);
 	
 	Properties properties = new Properties()
-	File propertiesFile = new File('test.properties')
+	File propertiesFile = new File('JenkinsPipelines/test.properties')
 	propertiesFile.withInputStream {
     		properties.load(it)
 	}
