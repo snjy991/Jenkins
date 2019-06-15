@@ -13,7 +13,7 @@ pipeline{
 					common.testMethod()
 				def jarname="xyz.jar"
 				def deploy= load "JenkinsPipelines/DeployCloudHub.groovy"
-					deploy.deployToCloudHub($jarname)		
+					deploy.deployToCloudHub(jarname)		
 				}
 			}
 		}	
