@@ -1,7 +1,7 @@
 
 def deployToCloudHub(String JarName){
 	
-	String PATH= "/devops/out/CDScript/working/"+JarName
+	String PATH= "/Users/snjy/Desktop/JenkinsPipelines"+JarName
 	println (PATH);
 	
 	Properties properties = new Properties()
@@ -11,7 +11,10 @@ def deployToCloudHub(String JarName){
 
 	if(env.DeploymentType == "FirstRun")
 	{
-		println("first time deploymnent")
+		withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId:'anypoint-studio-snjy', usernameVariable: 'Username', passwordVariable: 'Password']]) {
+                   // jarName=sh (script : 'ls /devops/out/CDScript/working/${BUILD_NUMBER}_${JOB_NAME}/',returnStdout:true)
+                    println "jar name ${jarName}"
+                    sh """anypoint-cli --username ${Username} --password ${Password} runtime-mgr cloudhub-application deploy --runtime properties.runtime --workers properties.worker --workerSize properties.workerSize --region properties.region --property "username:${Username}" "muleappfirstproject" ${PATH} """
 	}
 	else{
 		println("general deploymnent")
