@@ -14,7 +14,7 @@ pipeline{
 				script{
 				def common =load "JenkinsPipelines/Common.groovy"
 					common.testMethod()
-				def jarname="xyz.jar"
+				def jarname="test-1.2.0-mule-application.jar"
 				def deploy= load "JenkinsPipelines/DeployCloudHub.groovy"
 					deploy.deployToCloudHub(jarname)		
 				}
